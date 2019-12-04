@@ -5,10 +5,21 @@ def find_element_index(array, value_to_find)
 end
 
 def find_max_value(array)
-  array.sort!
-  array.pop
+  max = nil
+  array.length.times do |count|
+    if (array[count] > max) || max == nil
+      max = array[count]
+    end
+  end
+  max
 end
 
 def find_min_value(array)
-  array.min
+  min = nil
+  array.length.times do |count|
+    if (array[count] < min) || min == nil
+      min = array[count]
+    end
+  end
+  min
 end
