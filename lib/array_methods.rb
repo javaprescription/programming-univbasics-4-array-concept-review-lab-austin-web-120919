@@ -5,9 +5,9 @@ def find_element_index(array, value_to_find)
 end
 
 def find_max_value(array)
-  max = nil
+  max = 0
   array.length.times do |count|
-    if (array[count] > max) || max == nil
+    if array[count] > max
       max = array[count]
     end
   end
